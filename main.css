@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:white;
+}
+header {
+    color: #fff;
+    text-align: center;
+    padding: 2em;
+    height: 80px;
+}
+.header{
+     background-image: url(books.jpeg);
+}
+nav {
+    background-color: #555;
+    color: #fff;
+    padding: 0.5em;
+    text-align: center;
+    text-transform: capitalize;
+}
+.nav-bar a{
+    color: antiquewhite;
+    text-decoration: none;
+    margin: 15px;
+}
+.nav-bar a:hover{
+        background-color:whitesmoke;
+        color: #333;
+}
+section {
+    padding: 20px;
+    margin: 20px;
+}
+header h1 {
+    font-size: 2em;
+}
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+.feature {
+    text-align: center;
+    border: 1px solid #3c4648;
+}
+.feature:hover{
+transition:  1s ease ease-in-out;
+transform: scale(0.75);
+border-color: rgb(4, 74, 74);
+}
+.feature img {
+    width: 250px;
+    height: 180px;
+}
+.cta {
+    text-align: center;
+    background-color: white;
+    padding: 50px 0;
+}
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color:rgb(183, 53, 53);
+    color: #fff;
+    border-radius: 5px;
+    font-size: bold;
+}
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+  }
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-section {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    color: #ffcc00;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section li {
+    margin-bottom: 10px;
+}
+.social-icons {
+    margin-top: 20px;
+}
+.social-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+

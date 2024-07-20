@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Time Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url(sch.jpg);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #9ee6f4;
+      padding: 8px;
+      text-align: center;
+    }
+    tr{
+      background-color: rgb(152, 203, 216);
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px;
+      background-color: rgb(138, 203, 216);
+      border: #9ee6f4;
+    }
+  </style>
+</head>
+<body>
+<!--head section-->
+    <h1 style="text-align: center; font-size: 30px; text-decoration: underline;">Task Schedular</h1>
+ <!--box of subject-->
+    <form id="timetableForm">
+<!--subject title-->
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" required>
+<!--Time title-->     
+    <label for="time">Time:</label>
+    <input type="text" id="time" required>
+<!--day title-->
+    <label for="day">Day:</label>
+    <select id="day" required>
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+      <option value="Saturday">Saturday</option>
+      <option value="Sunday">Sunday</option>
+    </select>
+<!--button for submit-->
+    <button type="button" onclick="addEvent()">Add Task</button>
+  </form>
+<!--formation of schedular table-->
+  <table id="timetable" >
+    <tr>
+      <th>Time</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+      <th>Sunday</th>
+    </tr>
+  </table>
+<!--javascript-->
+  <script>
+    function addEvent() {
+      const subjectInput = document.getElementById('subject');
+      const timeInput = document.getElementById('time');
+      const dayInput = document.getElementById('day');
+
+      const subject = subjectInput.value;
+      const time = timeInput.value;
+      const day = dayInput.value;
+
+      const timetable = document.getElementById('timetable');
+      const timeRow = timetable.insertRow(-1);
+
+      // Add time cell
+      const timeCell = timeRow.insertCell(0);
+      timeCell.textContent = time;
+
+      // Add day cells
+      const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+      const dayIndex = days.indexOf(day) + 1; 
+      for (let i = 1; i <= 7; i++) {
+        const dayCell = timeRow.insertCell(i);
+        dayCell.textContent = i === dayIndex ? subject : '';
+      }
+
+      // Clear input fields
+      subjectInput.value = '';
+      timeInput.value = '';
+      dayInput.value = '';
+    }
+  </script>
+</body>
+</html>

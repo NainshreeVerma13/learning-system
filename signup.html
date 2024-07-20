@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup form</title>
+    <style>
+        form{
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 34px;
+        }
+        body{
+            background-color: rgb(245, 210, 164);
+        }
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            color: rgb(174, 48, 48);
+            text-decoration: underline;
+            font-size:38px ;
+        }
+        h3{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+            color: rgb(118, 46, 46);
+            text-align: center;
+        }
+        h4{
+            font-size: 34px;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        button{
+            background-color: crimson;
+            color: whitesmoke;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Welcome students!</h1>
+        <h3>Sign-up the form and become apart of this wonderfull plateform.</h3>
+        <form action="signup-process.php" method="post">
+          <!--form fields go here -->
+          <!--username-->
+          <label for="username">Username:</label><br>
+          <input type="text" id="username" name="username" required><br><br>
+          <!--password-->
+          <label for="password">Password:</label><br>
+          <input type="password" id="password" name="password" required><br><br>
+          <!--email-->
+          <label for="Email">Email:</label><br>
+          <input type="text" id="Email" name="Email" required><br><br>
+          <!--phone number-->
+          <label for="Phone number">Phone number:</label><br>
+          <input type="text" id="phone" name="Phone" required><br><br>
+          <!--submit button-->
+          <button class="btn">Submit</button>
+        </form>
+        <h4>THANKYOU!</h4>
+    </main>
+</body>
+</html>

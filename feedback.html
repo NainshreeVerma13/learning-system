@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        body{
+            background-image:url(feed.jpg) ;
+        }
+        h1{
+            display: center;
+        }
+        button{
+            background-color:aqua;
+            color: black;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <!--header-->
+    <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 50px; text-decoration: underline; color: darkgoldenrod;">Feedback Form</h1>
+    <!--php file attach-->
+    <br><br>
+    <form action="submit.php" method="post">
+        <!--rating area-->
+        <label for="rating" >Rating:</label>
+        <br>
+        <select name="rating" id="rating" required>
+            <option value="5">5 - Excellent</option>
+            <option value="4">4 - Good</option>
+            <option value="3">3 - Average</option>
+            <option value="2">2 - Poor</option>
+            <option value="1">1 - Very Poor</option>
+        </select>
+        <br><br>
+        <!--section for comment-->
+        <section>
+        <label for="comments">Comments:</label>
+        <textarea name="comments" id="comments" rows="4" required></textarea>
+        </section>
+        <br><br>
+        <!--submit button-->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
